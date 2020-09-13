@@ -73,6 +73,7 @@ class ViewController: UIViewController {
     // MARK: prepare data from struct
     func prepareData() -> [String: String]{
         var data: [ String : String] = [:]
+        let tempC = TempCalculation()
         
         if let pressure = listOfWeather?.main?.pressure
             , let humidity = listOfWeather?.main?.humidity
@@ -86,15 +87,16 @@ class ViewController: UIViewController {
             , let description = listOfWeather?.weather[0].description
         {
             
+            
             let urlImage = "http://openweathermap.org/img/wn/\(code)@2x.png"
             
             data["pressure"] = String(pressure)
             data["humidity"] = String(humidity)
             data["visibility"] = String(visibility)
             data["wind"] = String(wind)
-            data["minTemp"] = String(minTemp)
-            data["maxTemp"] = String(maxTemp)
-            data["temp"] = String(temp)
+            data["minTemp"] = String(tempC.kelvinToCelcius(kelvin: minTemp))
+            data["maxTemp"] = String(tempC.kelvinToCelcius(kelvin: maxTemp))
+            data["temp"] = String(tempC.kelvinToCelcius(kelvin: temp))
             data["urlImage"] = urlImage
             data["city"] = city
             data["description"] = description
@@ -114,9 +116,9 @@ class ViewController: UIViewController {
         humidityLabel.text = data["humidity"]
         visibilityLabel.text = data["visibility"]
         windLabel.text = data["wind"]
-        tempMinLabel.text = "↓ \(data["minTemp"] ?? "0")"
-        tempMaxLabel.text = "↑ \(data["maxTemp"] ?? "0")"
-        tempLabel.text = data["temp"]
+        tempMinLabel.text = "↓ \(data["minTemp"] ?? "0")°C"
+        tempMaxLabel.text = "↑ \(data["maxTemp"] ?? "0")°C"
+        tempLabel.text = "\(data["temp"] ?? "0")°C"
         cityLabel.text = data["city"]
          descriptionLabel.text = data["description"]
         
