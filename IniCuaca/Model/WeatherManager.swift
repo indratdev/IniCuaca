@@ -15,8 +15,8 @@ enum filterAPI {
 }
 
 struct WeatherManager {
-//    api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={your api key}
-    let apiKEY = "98623cb043652236d793d9ca6e5fbc35"
+    
+    let apiKEY = WeatherAPI.apiKEY
     let baseURL = "https://api.openweathermap.org/data/2.5/weather?"
     
     

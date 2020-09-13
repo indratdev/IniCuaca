@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F047A81250E530000D70431 /* WeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F047A80250E530000D70431 /* WeatherAPI.swift */; };
 		8F4A43C2250C8AFA00E597CA /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A43C1250C8AFA00E597CA /* WeatherManager.swift */; };
 		8F4A43C5250C927000E597CA /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A43C4250C927000E597CA /* WeatherModel.swift */; };
 		8F8EAD46250E1D890045E117 /* TempCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8EAD45250E1D890045E117 /* TempCalculation.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		01935B985FC0F875309B30FA /* Pods-IniCuaca.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IniCuaca.debug.xcconfig"; path = "Target Support Files/Pods-IniCuaca/Pods-IniCuaca.debug.xcconfig"; sourceTree = "<group>"; };
 		875B2E10F1081B8F86E59BC2 /* Pods-IniCuaca.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IniCuaca.release.xcconfig"; path = "Target Support Files/Pods-IniCuaca/Pods-IniCuaca.release.xcconfig"; sourceTree = "<group>"; };
+		8F047A80250E530000D70431 /* WeatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPI.swift; sourceTree = "<group>"; };
 		8F4A43C1250C8AFA00E597CA /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		8F4A43C4250C927000E597CA /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		8F8EAD45250E1D890045E117 /* TempCalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempCalculation.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				8F4A43C4250C927000E597CA /* WeatherModel.swift */,
 				8F8EAD45250E1D890045E117 /* TempCalculation.swift */,
 				8F8EAD47250E2CFA0045E117 /* Utilities.swift */,
+				8F047A80250E530000D70431 /* WeatherAPI.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				8F8EAD48250E2CFA0045E117 /* Utilities.swift in Sources */,
 				8F4A43C2250C8AFA00E597CA /* WeatherManager.swift in Sources */,
 				8F91C642250C793100BCCA20 /* SceneDelegate.swift in Sources */,
+				8F047A81250E530000D70431 /* WeatherAPI.swift in Sources */,
 				8F8EAD46250E1D890045E117 /* TempCalculation.swift in Sources */,
 				8F4A43C5250C927000E597CA /* WeatherModel.swift in Sources */,
 			);
