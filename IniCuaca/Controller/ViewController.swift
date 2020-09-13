@@ -83,6 +83,7 @@ class ViewController: UIViewController {
             , let temp = listOfWeather?.main?.temp
             , let code = listOfWeather?.weather[0].icon
             , let city = listOfWeather?.name
+            , let description = listOfWeather?.weather[0].description
         {
             
             let urlImage = "http://openweathermap.org/img/wn/\(code)@2x.png"
@@ -96,6 +97,7 @@ class ViewController: UIViewController {
             data["temp"] = String(temp)
             data["urlImage"] = urlImage
             data["city"] = city
+            data["description"] = description
         }
         
         return data
@@ -104,26 +106,22 @@ class ViewController: UIViewController {
     
     func launchUI(){
         
-        var data = prepareData()
+        let data = prepareData()
+        print(data)
         
         
         pressureLabel.text = data["pressure"]
         humidityLabel.text = data["humidity"]
         visibilityLabel.text = data["visibility"]
         windLabel.text = data["wind"]
-        tempMinLabel.text = data["min_temp"]
-        tempMaxLabel.text = data["max_temp"]
+        tempMinLabel.text = "↓ \(data["minTemp"] ?? "0")"
+        tempMaxLabel.text = "↑ \(data["maxTemp"] ?? "0")"
         tempLabel.text = data["temp"]
         cityLabel.text = data["city"]
+         descriptionLabel.text = data["description"]
         
-        //        let code = listOfWeather?.weather[0].icon
-        //        guard let url = URL(string: "http://openweathermap.org/img/wn/\(code ?? "01d")@2x.png") else {return}
-        //        print(url)
-        //        weatherImage.downloaded(from: url, contentMode: .scaleAspectFill)
-        //
-        //        descriptionLabel.text = "\(listOfWeather?.weather[0].description!)"
-        
-        
+        guard let url = URL(string: data["urlImage"]!) else {return}
+        weatherImage.downloaded(from: url, contentMode: .scaleAspectFill)
     }
     
     // MARK: getlocation
