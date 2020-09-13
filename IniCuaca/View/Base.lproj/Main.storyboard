@@ -278,6 +278,12 @@
                                     <constraint firstAttribute="height" constant="1" id="dCu-An-q1v"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Bl-oh-k1u">
+                                <rect key="frame" x="0.0" y="120" width="414" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -289,6 +295,7 @@
                             <constraint firstItem="bRd-JS-hWX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AXw-5Y-xbi"/>
                             <constraint firstItem="jmv-Wb-MtJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="CM5-4m-RPE"/>
                             <constraint firstItem="YHV-Kb-XLW" firstAttribute="top" secondItem="bRd-JS-hWX" secondAttribute="bottom" constant="5" id="CcM-sq-Cso"/>
+                            <constraint firstItem="8Bl-oh-k1u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DZM-ss-TR0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iAR-Qn-CGe" secondAttribute="trailing" symbolic="YES" id="JG4-zw-DBC"/>
                             <constraint firstItem="nk5-3b-gWs" firstAttribute="top" secondItem="iAR-Qn-CGe" secondAttribute="bottom" constant="30" id="Jsv-KX-6aY"/>
                             <constraint firstItem="fA7-kG-1k3" firstAttribute="top" secondItem="nk5-3b-gWs" secondAttribute="bottom" constant="5" id="LL9-Iy-m00"/>
@@ -299,6 +306,8 @@
                             <constraint firstItem="ca6-ZX-IEW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="Rvr-KZ-oxN"/>
                             <constraint firstItem="nk5-3b-gWs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="ZmM-o4-IRl"/>
                             <constraint firstItem="Wm2-aY-Wnr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="br8-0b-VWF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Bl-oh-k1u" secondAttribute="trailing" id="c7o-Rj-FDp"/>
+                            <constraint firstItem="8Bl-oh-k1u" firstAttribute="top" secondItem="YHV-Kb-XLW" secondAttribute="bottom" constant="10" id="dKc-EI-75n"/>
                             <constraint firstItem="ca6-ZX-IEW" firstAttribute="top" secondItem="N59-UC-ot1" secondAttribute="bottom" id="o42-yd-LI6"/>
                             <constraint firstItem="nk5-3b-gWs" firstAttribute="top" secondItem="vuZ-Xf-QTg" secondAttribute="bottom" constant="55" id="oHF-74-wwW"/>
                             <constraint firstItem="N59-UC-ot1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="op9-Zw-Vsh"/>
@@ -317,6 +326,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="lbV-RZ-Eha"/>
                     <connections>
                         <outlet property="cityLabel" destination="vuZ-Xf-QTg" id="mMN-2b-u8t"/>
+                        <outlet property="dateLabel" destination="8Bl-oh-k1u" id="mnA-aY-6XL"/>
                         <outlet property="descriptionLabel" destination="ca6-ZX-IEW" id="skV-sw-Nwf"/>
                         <outlet property="humidityLabel" destination="Mkk-Wd-Ygm" id="at4-2t-LFo"/>
                         <outlet property="humidityView" destination="LG1-Zk-MUF" id="VBM-Ud-Vg8"/>

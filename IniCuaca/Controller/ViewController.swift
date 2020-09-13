@@ -27,6 +27,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var searchTF: UITextField!
     @IBOutlet weak var searchBtn: UIButton!
+    @IBOutlet weak var dateLabel: UILabel!
     
     
     var locationManager: CLLocationManager?
@@ -77,6 +78,7 @@ class ViewController: UIViewController {
     func prepareData() -> [String: String]{
         var data: [ String : String] = [:]
         let tempC = TempCalculation()
+        let util = Utilities()
         
         if let pressure = listOfWeather?.main?.pressure
             , let humidity = listOfWeather?.main?.humidity
@@ -88,6 +90,7 @@ class ViewController: UIViewController {
             , let code = listOfWeather?.weather[0].icon
             , let city = listOfWeather?.name
             , let description = listOfWeather?.weather[0].description
+            , let datee = listOfWeather?.dt
         {
             let urlImage = "http://openweathermap.org/img/wn/\(code)@2x.png"
             
@@ -101,6 +104,8 @@ class ViewController: UIViewController {
             data["urlImage"] = urlImage
             data["city"] = city
             data["description"] = description
+            data["datee"] = util.convertDate(dateUnix: datee)
+            
         }
         
         return data
@@ -119,9 +124,12 @@ class ViewController: UIViewController {
         tempLabel.text = "\(data["temp"] ?? "0")°C"
         cityLabel.text = data["city"]
          descriptionLabel.text = data["description"]
+        dateLabel.text = data["datee"]
         
         guard let url = URL(string: data["urlImage"]!) else {return}
         weatherImage.downloaded(from: url, contentMode: .scaleAspectFill)
+        
+        
     }
     
     
