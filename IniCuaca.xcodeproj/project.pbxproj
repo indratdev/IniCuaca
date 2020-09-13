@@ -3,19 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F4A43C2250C8AFA00E597CA /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A43C1250C8AFA00E597CA /* WeatherManager.swift */; };
+		8F4A43C5250C927000E597CA /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A43C4250C927000E597CA /* WeatherModel.swift */; };
 		8F91C640250C793100BCCA20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91C63F250C793100BCCA20 /* AppDelegate.swift */; };
 		8F91C642250C793100BCCA20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91C641250C793100BCCA20 /* SceneDelegate.swift */; };
 		8F91C644250C793100BCCA20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F91C643250C793100BCCA20 /* ViewController.swift */; };
 		8F91C647250C793100BCCA20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F91C645250C793100BCCA20 /* Main.storyboard */; };
 		8F91C649250C793300BCCA20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F91C648250C793300BCCA20 /* Assets.xcassets */; };
 		8F91C64C250C793300BCCA20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F91C64A250C793300BCCA20 /* LaunchScreen.storyboard */; };
+		EFD9C113EFA926E96D01E9D0 /* Pods_IniCuaca.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B246B9E760B15D2B6DD145BE /* Pods_IniCuaca.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01935B985FC0F875309B30FA /* Pods-IniCuaca.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IniCuaca.debug.xcconfig"; path = "Target Support Files/Pods-IniCuaca/Pods-IniCuaca.debug.xcconfig"; sourceTree = "<group>"; };
+		875B2E10F1081B8F86E59BC2 /* Pods-IniCuaca.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IniCuaca.release.xcconfig"; path = "Target Support Files/Pods-IniCuaca/Pods-IniCuaca.release.xcconfig"; sourceTree = "<group>"; };
+		8F4A43C1250C8AFA00E597CA /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
+		8F4A43C4250C927000E597CA /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		8F91C63C250C793100BCCA20 /* IniCuaca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IniCuaca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F91C63F250C793100BCCA20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F91C641250C793100BCCA20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,7 @@
 		8F91C648250C793300BCCA20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F91C64B250C793300BCCA20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F91C64D250C793300BCCA20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B246B9E760B15D2B6DD145BE /* Pods_IniCuaca.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IniCuaca.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFD9C113EFA926E96D01E9D0 /* Pods_IniCuaca.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B97F52182FE47D770D79722 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B246B9E760B15D2B6DD145BE /* Pods_IniCuaca.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7C3A35C63DC9267F91B6A33D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				01935B985FC0F875309B30FA /* Pods-IniCuaca.debug.xcconfig */,
+				875B2E10F1081B8F86E59BC2 /* Pods-IniCuaca.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8F4A43C3250C8D2000E597CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8F4A43C1250C8AFA00E597CA /* WeatherManager.swift */,
+				8F4A43C4250C927000E597CA /* WeatherModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8F91C633250C793100BCCA20 = {
 			isa = PBXGroup;
 			children = (
 				8F91C63E250C793100BCCA20 /* IniCuaca */,
 				8F91C63D250C793100BCCA20 /* Products */,
+				7C3A35C63DC9267F91B6A33D /* Pods */,
+				3B97F52182FE47D770D79722 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +95,30 @@
 			children = (
 				8F91C63F250C793100BCCA20 /* AppDelegate.swift */,
 				8F91C641250C793100BCCA20 /* SceneDelegate.swift */,
-				8F91C643250C793100BCCA20 /* ViewController.swift */,
-				8F91C645250C793100BCCA20 /* Main.storyboard */,
+				8F91C653250C7A4700BCCA20 /* Controller */,
+				8F91C654250C7A5800BCCA20 /* View */,
 				8F91C648250C793300BCCA20 /* Assets.xcassets */,
 				8F91C64A250C793300BCCA20 /* LaunchScreen.storyboard */,
 				8F91C64D250C793300BCCA20 /* Info.plist */,
+				8F4A43C3250C8D2000E597CA /* Model */,
 			);
 			path = IniCuaca;
+			sourceTree = "<group>";
+		};
+		8F91C653250C7A4700BCCA20 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8F91C643250C793100BCCA20 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8F91C654250C7A5800BCCA20 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8F91C645250C793100BCCA20 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +128,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F91C650250C793300BCCA20 /* Build configuration list for PBXNativeTarget "IniCuaca" */;
 			buildPhases = (
+				01B00410EDDF760A3593F043 /* [CP] Check Pods Manifest.lock */,
 				8F91C638250C793100BCCA20 /* Sources */,
 				8F91C639250C793100BCCA20 /* Frameworks */,
 				8F91C63A250C793100BCCA20 /* Resources */,
+				C7C6AB0EF0F5E49DC5C33A3C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +189,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		01B00410EDDF760A3593F043 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IniCuaca-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7C6AB0EF0F5E49DC5C33A3C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IniCuaca/Pods-IniCuaca-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IniCuaca/Pods-IniCuaca-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IniCuaca/Pods-IniCuaca-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8F91C638250C793100BCCA20 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,7 +238,9 @@
 			files = (
 				8F91C644250C793100BCCA20 /* ViewController.swift in Sources */,
 				8F91C640250C793100BCCA20 /* AppDelegate.swift in Sources */,
+				8F4A43C2250C8AFA00E597CA /* WeatherManager.swift in Sources */,
 				8F91C642250C793100BCCA20 /* SceneDelegate.swift in Sources */,
+				8F4A43C5250C927000E597CA /* WeatherModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +382,7 @@
 		};
 		8F91C651250C793300BCCA20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01935B985FC0F875309B30FA /* Pods-IniCuaca.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +400,7 @@
 		};
 		8F91C652250C793300BCCA20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 875B2E10F1081B8F86E59BC2 /* Pods-IniCuaca.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
