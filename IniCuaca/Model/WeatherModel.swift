@@ -37,7 +37,7 @@ struct Coord: Codable {
 struct Main: Codable {
     let temp, pressure: Double?
     let humidity: Int?
-    let tempMin, tempMax, seaLevel, grndLevel: String?
+    let temp_min, temp_max, seaLevel, grndLevel: Double?
 
 //    enum CodingKeys: String, CodingKey {
 //        case temp, pressure, humidity
@@ -58,7 +58,7 @@ struct Sys: Codable {
 // MARK: - Weather
 struct Weather: Codable {
     let id: Int?
-    let main, weatherDescription, icon: String?
+    let main, description, icon: String?
 
 //    enum CodingKeys: String, CodingKey {
 //        case id, main

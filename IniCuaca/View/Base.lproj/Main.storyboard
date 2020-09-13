@@ -196,20 +196,48 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmv-Wb-MtJ">
-                                <rect key="frame" x="5" y="582" width="100" height="50"/>
+                                <rect key="frame" x="5" y="582" width="150" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="BR4-31-Lzb"/>
-                                    <constraint firstAttribute="width" constant="100" id="YEC-9j-ehr"/>
+                                    <constraint firstAttribute="width" constant="150" id="YEC-9j-ehr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuZ-Xf-QTg">
+                                <rect key="frame" x="259" y="582.5" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="XRT-eA-2rO"/>
+                                    <constraint firstAttribute="width" constant="150" id="w2b-34-6P9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ca6-ZX-IEW">
+                                <rect key="frame" x="5" y="556.5" width="150" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="hxJ-Ls-89C"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YFR-zm-cfJ">
+                                <rect key="frame" x="5" y="451.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="IcQ-aT-6c6"/>
+                                    <constraint firstAttribute="width" constant="100" id="RpI-b9-Yn1"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vuZ-Xf-QTg" secondAttribute="trailing" constant="5" id="3ss-33-MMv"/>
                             <constraint firstItem="fA7-kG-1k3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="4Ih-au-asE"/>
                             <constraint firstItem="4vr-Ha-zD4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="4wA-u3-ktC"/>
+                            <constraint firstItem="jmv-Wb-MtJ" firstAttribute="top" secondItem="ca6-ZX-IEW" secondAttribute="bottom" constant="5" id="8gu-dg-K9B"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nk5-3b-gWs" secondAttribute="trailing" constant="5" id="9rd-Ve-jXU"/>
                             <constraint firstItem="jmv-Wb-MtJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="CM5-4m-RPE"/>
                             <constraint firstItem="nk5-3b-gWs" firstAttribute="top" secondItem="iAR-Qn-CGe" secondAttribute="bottom" constant="30" id="Jsv-KX-6aY"/>
@@ -217,9 +245,13 @@
                             <constraint firstItem="nk5-3b-gWs" firstAttribute="top" secondItem="4vr-Ha-zD4" secondAttribute="bottom" constant="30" id="Nwj-oC-KGL"/>
                             <constraint firstItem="iAR-Qn-CGe" firstAttribute="leading" secondItem="4vr-Ha-zD4" secondAttribute="trailing" constant="10" id="QGv-Vb-1Bd"/>
                             <constraint firstItem="Wm2-aY-Wnr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Rh4-6d-Lgl"/>
+                            <constraint firstItem="ca6-ZX-IEW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="Rvr-KZ-oxN"/>
                             <constraint firstItem="nk5-3b-gWs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="ZmM-o4-IRl"/>
+                            <constraint firstItem="YFR-zm-cfJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="a3i-eI-xaa"/>
                             <constraint firstItem="Wm2-aY-Wnr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="br8-0b-VWF"/>
+                            <constraint firstItem="nk5-3b-gWs" firstAttribute="top" secondItem="vuZ-Xf-QTg" secondAttribute="bottom" constant="55" id="oHF-74-wwW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fA7-kG-1k3" secondAttribute="bottom" id="pxi-Vk-aLF"/>
+                            <constraint firstItem="ca6-ZX-IEW" firstAttribute="top" secondItem="YFR-zm-cfJ" secondAttribute="bottom" constant="5" id="rMa-UQ-dRU"/>
                             <constraint firstItem="4vr-Ha-zD4" firstAttribute="top" secondItem="jmv-Wb-MtJ" secondAttribute="bottom" constant="5" id="rs4-Lv-S6b"/>
                             <constraint firstAttribute="bottom" secondItem="Wm2-aY-Wnr" secondAttribute="bottom" id="uED-g1-ski"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fA7-kG-1k3" secondAttribute="trailing" constant="5" id="vSW-Ap-yva"/>
@@ -229,6 +261,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="lbV-RZ-Eha"/>
                     <connections>
+                        <outlet property="cityLabel" destination="vuZ-Xf-QTg" id="mMN-2b-u8t"/>
+                        <outlet property="descriptionLabel" destination="ca6-ZX-IEW" id="skV-sw-Nwf"/>
                         <outlet property="humidityLabel" destination="Mkk-Wd-Ygm" id="at4-2t-LFo"/>
                         <outlet property="humidityView" destination="LG1-Zk-MUF" id="VBM-Ud-Vg8"/>
                         <outlet property="pressureLabel" destination="4bB-c9-RUh" id="3vS-B0-Ne9"/>
@@ -238,6 +272,7 @@
                         <outlet property="tempMinLabel" destination="4vr-Ha-zD4" id="xM2-Sb-J0G"/>
                         <outlet property="visibilityLabel" destination="wID-o3-IS3" id="r2x-NI-If5"/>
                         <outlet property="visibiltyView" destination="eCg-7Y-TDo" id="Fo4-lZ-1vX"/>
+                        <outlet property="weatherImage" destination="YFR-zm-cfJ" id="8vb-mW-rhd"/>
                         <outlet property="windLabel" destination="ZG2-Ud-4Rk" id="gly-C9-HEe"/>
                         <outlet property="windView" destination="JMT-Za-oiL" id="Yj4-jf-wgX"/>
                     </connections>

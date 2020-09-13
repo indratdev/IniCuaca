@@ -15,8 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var visibiltyView: UIView!
     @IBOutlet weak var windView: UIView!
     @IBOutlet weak var pressureView: UIView!
-    
-    
+    @IBOutlet weak var weatherImage: UIImageView!
     @IBOutlet weak var pressureLabel: UILabel!
     @IBOutlet weak var humidityLabel: UILabel!
     @IBOutlet weak var visibilityLabel: UILabel!
@@ -24,6 +23,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var tempMinLabel: UILabel!
     @IBOutlet weak var tempMaxLabel: UILabel!
     @IBOutlet weak var tempLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     
     var locationManager: CLLocationManager?
@@ -69,28 +70,60 @@ class ViewController: UIViewController {
         windView.backgroundColor = .white
     }
     
-    func launchUI(){
-        
-        print(listOfWeather?.main?.tempMin)
-        
-        if let min = listOfWeather?.main?.tempMin {
-            tempMinLabel.text = String(min)
-            print("heloooooooooo")
-        }
+    // MARK: prepare data from struct
+    func prepareData() -> [String: String]{
+        var data: [ String : String] = [:]
         
         if let pressure = listOfWeather?.main?.pressure
             , let humidity = listOfWeather?.main?.humidity
             , let visibility = listOfWeather?.visibility
             , let wind = listOfWeather?.wind?.speed
-//            , let minTemp = listOfWeather?.main?.tempMin
-//            , let maxTemp = listOfWeather?.main?.tempMax
-//            , let temp = listOfWeather?.main?.temp
+            , let minTemp = listOfWeather?.main?.temp_min
+            , let maxTemp = listOfWeather?.main?.temp_max
+            , let temp = listOfWeather?.main?.temp
+            , let code = listOfWeather?.weather[0].icon
+            , let city = listOfWeather?.name
         {
-            pressureLabel.text = String(pressure)
-            humidityLabel.text = String("\(humidity) %")
-            visibilityLabel.text = String(visibility)
-            windLabel.text = String(wind)
+            
+            let urlImage = "http://openweathermap.org/img/wn/\(code)@2x.png"
+            
+            data["pressure"] = String(pressure)
+            data["humidity"] = String(humidity)
+            data["visibility"] = String(visibility)
+            data["wind"] = String(wind)
+            data["minTemp"] = String(minTemp)
+            data["maxTemp"] = String(maxTemp)
+            data["temp"] = String(temp)
+            data["urlImage"] = urlImage
+            data["city"] = city
         }
+        
+        return data
+    }
+    
+    
+    func launchUI(){
+        
+        var data = prepareData()
+        
+        
+        pressureLabel.text = data["pressure"]
+        humidityLabel.text = data["humidity"]
+        visibilityLabel.text = data["visibility"]
+        windLabel.text = data["wind"]
+        tempMinLabel.text = data["min_temp"]
+        tempMaxLabel.text = data["max_temp"]
+        tempLabel.text = data["temp"]
+        cityLabel.text = data["city"]
+        
+        //        let code = listOfWeather?.weather[0].icon
+        //        guard let url = URL(string: "http://openweathermap.org/img/wn/\(code ?? "01d")@2x.png") else {return}
+        //        print(url)
+        //        weatherImage.downloaded(from: url, contentMode: .scaleAspectFill)
+        //
+        //        descriptionLabel.text = "\(listOfWeather?.weather[0].description!)"
+        
+        
     }
     
     // MARK: getlocation
@@ -165,3 +198,20 @@ extension ViewController: CLLocationManagerDelegate {
     
 }
 
+
+extension UIImageView {
+    func downloaded(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
+        contentMode = mode
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard
+                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                let data = data, error == nil,
+                let image = UIImage(data: data)
+                else { return }
+            DispatchQueue.main.async() { [weak self] in
+                self?.image = image
+            }
+        }.resume()
+    }
+}
