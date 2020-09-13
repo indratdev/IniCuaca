@@ -25,6 +25,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var searchTF: UITextField!
+    @IBOutlet weak var searchBtn: UIButton!
     
     
     var locationManager: CLLocationManager?
@@ -57,6 +59,7 @@ class ViewController: UIViewController {
     
     // MARK: CUSTOM LAYOUT
     func customLayout(){
+        searchBtn.layer.cornerRadius = 5
         pressureView.layer.cornerRadius = 10
         pressureView.backgroundColor = .white
         
@@ -86,8 +89,6 @@ class ViewController: UIViewController {
             , let city = listOfWeather?.name
             , let description = listOfWeather?.weather[0].description
         {
-            
-            
             let urlImage = "http://openweathermap.org/img/wn/\(code)@2x.png"
             
             data["pressure"] = String(pressure)
@@ -105,12 +106,9 @@ class ViewController: UIViewController {
         return data
     }
     
-    
+    // MARK: lauch UI
     func launchUI(){
-        
         let data = prepareData()
-        print(data)
-        
         
         pressureLabel.text = data["pressure"]
         humidityLabel.text = data["humidity"]
@@ -125,6 +123,7 @@ class ViewController: UIViewController {
         guard let url = URL(string: data["urlImage"]!) else {return}
         weatherImage.downloaded(from: url, contentMode: .scaleAspectFill)
     }
+    
     
     // MARK: getlocation
     func getLocation(coordinate: [String: String]){
@@ -200,7 +199,7 @@ extension ViewController: CLLocationManagerDelegate {
 
 
 extension UIImageView {
-    func downloaded(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
+    func downloaded(from url: URL, contentMode mode: UIView.ContentMode = .scaleToFill) {
         contentMode = mode
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard
